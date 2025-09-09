@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import './App.css';
 
@@ -13,7 +12,7 @@ function App() {
 
     // Simple hardcoded login validation
     if (username === 'admin' && password === 'admin123') {
-      setUser({ name: 'Admin' });
+      setUser({ name: username });
       setError('');
     } else {
       setError('Invalid username or password');
@@ -24,6 +23,7 @@ function App() {
     setUser(null);
     setUsername('');
     setPassword('');
+    setError('');
   };
 
   if (user) {
@@ -31,7 +31,7 @@ function App() {
       <div className="dashboard">
         <h1>Welcome, {user.name}!</h1>
         <p>This is your dashboard.</p>
-        <button onClick={handleLogout}>Logout</button>
+        <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
     );
   }
@@ -54,7 +54,7 @@ function App() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit" className="login-btn">Login</button>
       </form>
       {error && <p className="error">{error}</p>}
     </div>
