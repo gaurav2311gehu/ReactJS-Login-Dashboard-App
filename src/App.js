@@ -15,7 +15,11 @@ function App() {
       setUser({ name: username });
       setError('');
     } else {
+<<<<<<< HEAD
       setError('Invalid username or password!!!');
+=======
+      setError('Invalid username or password!');
+>>>>>>> feature
     }
   };
 
