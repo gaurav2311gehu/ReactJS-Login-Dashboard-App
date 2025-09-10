@@ -31,7 +31,7 @@ function App() {
       <div className="dashboard">
         <h1>Welcome, {user.name}!</h1>
         <p>This is your dashboard.</p>
-        <p className="note">CI/CD test successful! Changes deployed from GitHub → Azure DevOps → App Service</p>
+        <p className="note">test successful! Changes deployed from GitHub → Azure DevOps → App Service</p>
         <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
     );
